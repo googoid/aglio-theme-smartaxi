@@ -49,5 +49,6 @@
     "istanbul": "^0.3.6",
     "mocha": "^2.0.1",
     "rimraf": "^2.4.1"
-  }
+  },
+  "private": true
 }
