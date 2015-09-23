@@ -441,7 +441,7 @@ exports.render = (input, options, done) ->
     permalinkClass: 'permalink'
   ).use(require('markdown-it-checkbox')
   ).use(require('markdown-it-container'), 'note'
-  ).use(require('markdown-it-container'), 'warning'
+  ).use(require('markdown-it-container'), 'warning')
   #).use(require('markdown-it-emoji'))
 
   # Enable code highlighting for unfenced code blocks
