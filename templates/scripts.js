@@ -52,6 +52,8 @@ function toggleCollapseButton(event) {
   is currently selected or `force` has been passed.
 */
 function toggleCollapseNav(event, force) {
+    event.preventDefault();
+
     var heading = event.target.parentNode;
     var content = heading.nextSibling;
     var inner = content.children[0];
