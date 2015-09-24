@@ -159,7 +159,7 @@ function init() {
     navItems = document.querySelectorAll('nav .resource-group .heading a');
     for (i = 0; i < navItems.length; i++) {
         navItems[i].onclick = function (event) {
-          event.target.parentNode.onclick({target: this.parentNode}, true);
+          toggleCollapseNav({target: this.parentNode}, true);
           event.preventDefault();
         }
     }
