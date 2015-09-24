@@ -52,8 +52,6 @@ function toggleCollapseButton(event) {
   is currently selected or `force` has been passed.
 */
 function toggleCollapseNav(event, force) {
-    event.preventDefault();
-
     var heading = event.target.parentNode;
     var content = heading.nextSibling;
     var inner = content.children[0];
@@ -157,6 +155,15 @@ function init() {
         // Show all by default
         toggleCollapseNav({target: navItems[i].children[0]});
     }
+
+    var navItems = document.querySelectorAll('nav .resource-group .heading a');
+    for (i = 0; i < navItems.length; i++) {
+        navItems[i].onclick = function (event) {
+          event.preventDefault();
+          return false;
+        }
+    }
+
 }
 
 // Initial call to set up buttons
