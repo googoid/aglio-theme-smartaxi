@@ -156,12 +156,11 @@ function init() {
         toggleCollapseNav({target: navItems[i].children[0]});
     }
 
-    var navItems = document.querySelectorAll('nav .resource-group .heading a');
+    navItems = document.querySelectorAll('nav .resource-group .heading a');
     for (i = 0; i < navItems.length; i++) {
         navItems[i].onclick = function (event) {
-          event.target.parentNode.onclick({target: this}, true);
+          event.target.parentNode.onclick({target: this.parentNode}, true);
           event.preventDefault();
-          return false;
         }
     }
 
