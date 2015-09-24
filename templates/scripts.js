@@ -65,7 +65,7 @@ function toggleCollapseNav(event, force) {
       // Currently showing, so let's hide it, but only if this nav item
       // is already selected. This prevents newly selected items from
       // collapsing in an annoying fashion.
-      if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
+      if (force || (window.location.hash && endsWith(event.target.href, window.location.hash))) {
         content.style.maxHeight = '0px';
       }
     } else {
