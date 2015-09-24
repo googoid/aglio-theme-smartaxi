@@ -38,7 +38,7 @@ mixin Nav()
                 .heading
                   .chevron
                     i.open.fa.fa-angle-down
-                  a(href=resourceGroup.elementLink)!= resourceGroup.name || 'Resource Group'
+                  a!= resourceGroup.name || 'Resource Group'
                 .collapse-content
                   ul
                     each item in resourceGroup.navItems || []

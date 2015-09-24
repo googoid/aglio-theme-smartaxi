@@ -84,7 +84,7 @@ function refresh(body) {
 
     // Re-initialize the page
     init();
-    autoCollapse();
+    //autoCollapse();
 
     document.querySelector('body').className = '';
 }
@@ -161,7 +161,7 @@ function init() {
 init();
 
 window.onload = function () {
-    autoCollapse();
+    //autoCollapse();
     // Remove the `preload` class to enable animations
     document.querySelector('body').className = '';
 };
