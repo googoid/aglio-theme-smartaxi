@@ -160,9 +160,8 @@ function init() {
     for (i = 0; i < navItems.length; i++) {
         navItems[i].onclick = function (event) {
           event.preventDefault();
-          var parentNode = event.target.parentNode;
-          event.target.parentNode = parentNode.parentNode;
-          parentNode.onclick(event, true);
+          event.parentNode.onclick({target: this.parentNode}, true);
+          return false;
         }
     }
 
